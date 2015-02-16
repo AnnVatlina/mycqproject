@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2012-09-24T12:36:55.477-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/mycqproject/templates/contentpage"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Products"
+        jcr:uuid="d4cde853-328d-44a2-8d0a-fb6001fe24da"
+        sling:resourceType="mycqproject/components/contentpage"
+        subtitle="what we do">
+        <newslist
+            jcr:lastModified="{Date}2012-09-24T12:36:55.477-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mycqproject/components/listchildren"
+            listroot="/content/mycqproject/en/products"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+        <rightpar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/iparsys">
+            <weather
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mycqproject/components/weather"/>
+        </rightpar>
+    </jcr:content>
+    <product1/>
+    <product2/>
+</jcr:root>

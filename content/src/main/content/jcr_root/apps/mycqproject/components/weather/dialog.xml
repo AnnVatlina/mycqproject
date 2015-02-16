@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Edit Weather Component"
+          height="600"
+          width="700"
+          xtype="dialog">
+    <items
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                    jcr:primaryType="cq:Panel"
+                    title="Add Information">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Title:"
+                            name="./titleWeatherComponent"
+                            xtype="textfield"/>
+                    <text
+                            jcr:primaryType="cq:Widget"
+                            height="300"
+                            hideLabel="true"
+                            fieldLabel="Description:"
+                            name="./textWeatherComponent"
+                            width="600"
+                            xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <edit
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*"/>
+                            <findreplace
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*"/>
+                            <format
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*"/>
+                            <image
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*"/>
+                            <justify
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*"/>
+                            <links
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*"/>
+                            <lists
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*"/>
+                            <misctools
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*"/>
+                            <paraformat
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*">
+                                <formats jcr:primaryType="cq:WidgetCollection">
+                                    <blockquote
+                                            jcr:primaryType="nt:unstructured"
+                                            description="Blockquote"
+                                            tag="blockquote"/>
+                                    <heading3
+                                            jcr:primaryType="nt:unstructured"
+                                            description="Heading 3"
+                                            tag="h3"/>
+                                    <heading4
+                                            jcr:primaryType="nt:unstructured"
+                                            description="Heading 4"
+                                            tag="h4"/>
+                                    <heading5
+                                            jcr:primaryType="nt:unstructured"
+                                            description="Heading 5"
+                                            tag="h5"/>
+                                    <heading6
+                                            jcr:primaryType="nt:unstructured"
+                                            description="Heading 6"
+                                            tag="h6"/>
+                                    <paragraph
+                                            jcr:primaryType="nt:unstructured"
+                                            description="Paragraph"
+                                            tag="p"/>
+                                    <heading1
+                                            jcr:primaryType="nt:unstructured"
+                                            description="Heading 1"
+                                            tag="h1"/>
+                                    <heading2
+                                            jcr:primaryType="nt:unstructured"
+                                            description="Heading 2"
+                                            tag="h2"/>
+                                </formats>
+                            </paraformat>
+                            <spellcheck
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*"/>
+                            <styles
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*">
+                                <styles jcr:primaryType="cq:WidgetCollection">
+                                    <red
+                                            jcr:primaryType="nt:unstructured"
+                                            cssName="red"
+                                            text="red"/>
+                                    <green
+                                            jcr:primaryType="nt:unstructured"
+                                            cssName="green"
+                                            text="green"/>
+                                    <blue
+                                            jcr:primaryType="nt:unstructured"
+                                            cssName="blue"
+                                            text="blue"/>
+                                    <cff6600
+                                            jcr:primaryType="nt:unstructured"
+                                            cssName="cff6600"
+                                            text="cff6600"/>
+                                    <e16300
+                                            jcr:primaryType="nt:unstructured"
+                                            cssName="e16300"
+                                            text="e16300"/>
+                                </styles>
+                            </styles>
+                            <subsuperscript
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*"/>
+                            <table
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*">
+                                <tableStyles jcr:primaryType="cq:WidgetCollection">
+                                    <table-generic
+                                            jcr:primaryType="nt:unstructured"
+                                            cssName="table-generic"
+                                            text="table-generic"/>
+                                    <table-plain
+                                            jcr:primaryType="nt:unstructured"
+                                            cssName="table-plain"
+                                            text="table-plain"/>
+                                </tableStyles>
+                                <cellStyles jcr:primaryType="cq:WidgetCollection">
+                                    <first
+                                            jcr:primaryType="nt:unstructured"
+                                            cssName="first"
+                                            text="first"/>
+                                </cellStyles>
+                            </table>
+                        </rtePlugins>
+                        <htmlRules jcr:primaryType="nt:unstructured">
+                            <links jcr:primaryType="nt:unstructured">
+                                <targetConfig
+                                        jcr:primaryType="nt:unstructured"
+                                        mode="auto"
+                                        targetExternal="_blank"/>
+                            </links>
+                        </htmlRules>
+                    </text>
+                    <city
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Select City: "
+                            name="./cityWeatherComponents"
+                            type="select"
+                            options="/content/dam/mycqproject/city.json"
+                            optionsTextField = "nm"
+                            optionsValueField = "id"
+                            optionsRoot = "cities"
+                            xtype="selection"/>
+                    <unit
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Select Unit: "
+                            name="./unitWeatherComponents"
+                            type="select"
+                            options="/bin/units.json"
+                            optionsRoot="root"
+                            xtype="selection"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
