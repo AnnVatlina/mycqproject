@@ -1,5 +1,6 @@
 package com.axamit.training.mycqproject.service.impl;
 
+import com.axamit.training.mycqproject.models.WeatherModel;
 import com.axamit.training.mycqproject.service.WeatherService;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Properties;
@@ -14,15 +15,17 @@ import org.slf4j.LoggerFactory;
  */
 
 @Component
-@Service (value = WeatherService.class)
+@Service(value = WeatherService.class)
 @Properties({
-        @Property(name = "adaptables", value = {"Resource" }),
-        @Property(name = "adapters", value = {"WeatherModel" })
+        @Property(name = "adaptables", value = {"Resource"}),
+        @Property(name = "adapters", value = {"WeatherModel"})
 })
 public class WeatherServiceImpl implements WeatherService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WeatherServiceImpl.class);
 
-
-
+    @Override
+    public void doSomething(WeatherModel weatherModel) {
+        System.out.println("WeatherServiceImpl.doSomething");
+    }
 }

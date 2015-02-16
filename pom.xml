@@ -38,7 +38,7 @@
         <cq.wcm.taglib.version>5.7.4</cq.wcm.taglib.version>
         <org.apache.sling.api.version>2.4.0</org.apache.sling.api.version>
         <org.apache.sling.scripting.jsp.taglib.version>2.2.4</org.apache.sling.scripting.jsp.taglib.version>
-        <org.apache.sling.models.api.version>1.1.0</org.apache.sling.models.api.version>
+        <org.apache.sling.models.api.version>1.0.0</org.apache.sling.models.api.version>
         <commons-beanutils.version>1.9.2</commons-beanutils.version>
 
     </properties>

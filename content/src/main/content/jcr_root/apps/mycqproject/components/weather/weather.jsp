@@ -1,3 +1,4 @@
+<%@ page import="com.axamit.training.mycqproject.models.WeatherModel" %>
 <%@include file="/libs/foundation/global.jsp"%>
 
 <div class="weather_block">
@@ -11,6 +12,10 @@
     ${properties.cityWeatherComponents}
     ${properties.unitWeatherComponents}
 
-    ${sling:adaptTo(resource, "com.axamit.training.mycqproject.components.weather.WeatherModel")}
+    <%
+        com.axamit.training.mycqproject.models.WeatherModel weatherModel = resource.adaptTo(com.axamit.training.mycqproject.models.WeatherModel.class);
+        System.out.println("JspClass.jsp_service_method");
+        weatherModel.getCityWeatherComponents();
+    %>
 
 </div>
