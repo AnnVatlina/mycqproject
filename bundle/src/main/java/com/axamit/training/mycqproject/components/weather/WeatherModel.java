@@ -1,8 +1,11 @@
 package com.axamit.training.mycqproject.components.weather;
 
+import com.axamit.training.mycqproject.service.WeatherService;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.Optional;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -12,22 +15,30 @@ import javax.inject.Inject;
  * User: anna.vatlina on 16.02.2015, 12:52
  */
 
-@Model(adaptables=Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+@Model(adaptables=Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, adapters = WeatherService.class)
 public class WeatherModel {
 //
 //    @OSGiService
 //    private WeatherService weatherService;
 
     @Inject
+    @Optional
+    @Default(values="defaultValue")
     private String titleWeatherComponent;
 
     @Inject
+    @Optional
+    @Default(values="defaultValue")
     private String textWeatherComponent;
 
     @Inject
+    @Optional
+    @Default(values="defaultValue")
     private String cityWeatherComponents;
 
     @Inject
+    @Optional
+    @Default(values="defaultValue")
     private String unitWeatherComponents;
 
 //    @Self
@@ -42,32 +53,16 @@ public class WeatherModel {
         return titleWeatherComponent;
     }
 
-    public void setTitleWeatherComponent(String titleWeatherComponent) {
-        this.titleWeatherComponent = titleWeatherComponent;
-    }
-
     public String getTextWeatherComponent() {
         return textWeatherComponent;
-    }
-
-    public void setTextWeatherComponent(String textWeatherComponent) {
-        this.textWeatherComponent = textWeatherComponent;
     }
 
     public String getCityWeatherComponents() {
         return cityWeatherComponents;
     }
 
-    public void setCityWeatherComponents(String cityWeatherComponents) {
-        this.cityWeatherComponents = cityWeatherComponents;
-    }
-
     public String getUnitWeatherComponents() {
         return unitWeatherComponents;
-    }
-
-    public void setUnitWeatherComponents(String unitWeatherComponents) {
-        this.unitWeatherComponents = unitWeatherComponents;
     }
 
     @PostConstruct
