@@ -12,10 +12,11 @@
     ${properties.cityWeatherComponents}
     ${properties.unitWeatherComponents}
 
+    ${sling:adaptTo(resource, "com.axamit.training.mycqproject.models.WeatherModel")}
     <%
-        com.axamit.training.mycqproject.models.WeatherModel weatherModel = resource.adaptTo(com.axamit.training.mycqproject.models.WeatherModel.class);
+        /*WeatherModel weatherModel = resource.adaptTo(WeatherModel.class);
         System.out.println("JspClass.jsp_service_method");
-        weatherModel.getCityWeatherComponents();
+        weatherModel.getCityWeatherComponents();*/
     %>
 
 </div>
