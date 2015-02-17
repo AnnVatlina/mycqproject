@@ -104,15 +104,9 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>my-group-id.mycqproject-bundle</Bundle-SymbolicName>
-                        <Embed-Dependency>
-                            org.apache.sling.models.api,
-                            org.apache.sling.models.impl,
-                            commons-beanutils
-                        </Embed-Dependency>
-                        <Embed-Transitive>true</Embed-Transitive>
-                        <Sling-Model-Packages>com.axamit.training.mycqproject.components.weather
+                        <Sling-Model-Packages>
+                            com.axamit.training.mycqproject.models
                         </Sling-Model-Packages>
-                        <Export-Packages>org.apache.sling.models.*</Export-Packages>
                     </instructions>
                 </configuration>
             </plugin>
