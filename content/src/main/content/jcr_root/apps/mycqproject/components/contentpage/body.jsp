@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%>
+<%@include file="/apps/mycqproject/common/global.jsp"%>
 <body>
 <div id="CQ">
     <cq:include path="topnav" resourceType="mycqproject/components/topnav" />

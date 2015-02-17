@@ -1,5 +1,5 @@
-<%@ page import="com.axamit.training.mycqproject.models.WeatherModel" %>
-<%@include file="/libs/foundation/global.jsp"%>
+<%@include file="/apps/mycqproject/common/global.jsp"%>
+
 <div class="weather_block">
 
     <h3>${properties.titleWeatherComponent}</h3>
@@ -11,10 +11,7 @@
     ${properties.cityWeatherComponents}
     ${properties.unitWeatherComponents}
 
-    <%--${sling:adaptTo(resource, "com.axamit.training.mycqproject.models.WeatherModel")}--%>
-    <%--<sling:adaptTo adaptable='${resource}' adaptTo='com.axamit.training.mycqproject.models.WeatherModel' var="model"/>--%>
-    <%
-        WeatherModel weatherModel = resource.adaptTo(WeatherModel.class);
-    %>
+    <sling:adaptTo var="search" adaptable="${resource}" adaptTo="com.axamit.training.mycqproject.models.WeatherModel"/>
+    ${search.currentCondition.city}, ${search.currentCondition.country}
 
 </div>

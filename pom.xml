@@ -37,6 +37,7 @@
         <cq.wcm.commons.version>5.6.4</cq.wcm.commons.version>
         <cq.wcm.taglib.version>5.7.4</cq.wcm.taglib.version>
         <org.apache.sling.api.version>2.4.0</org.apache.sling.api.version>
+        <org.apache.sling.jcr.api.version>2.1.0</org.apache.sling.jcr.api.version>
         <org.apache.sling.scripting.jsp.taglib.version>2.2.4</org.apache.sling.scripting.jsp.taglib.version>
         <org.apache.sling.scripting.jsp.version>2.1.6</org.apache.sling.scripting.jsp.version>
         <org.apache.sling.models.api.version>1.1.0</org.apache.sling.models.api.version>
@@ -91,13 +92,13 @@
             <dependency>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.api</artifactId>
-                <version>2.2.0</version>
+                <version>${org.apache.sling.api.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.jcr.api</artifactId>
-                <version>2.1.0</version>
+                <version>${org.apache.sling.jcr.api.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -128,11 +129,6 @@
                 <groupId>com.day.cq.wcm</groupId>
                 <artifactId>cq-wcm-taglib</artifactId>
                 <version>${cq.wcm.taglib.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.sling</groupId>
-                <artifactId>org.apache.sling.api</artifactId>
-                <version>${org.apache.sling.api.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.sling</groupId>

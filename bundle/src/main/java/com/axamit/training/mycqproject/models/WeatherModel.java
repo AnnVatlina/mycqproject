@@ -36,8 +36,7 @@ public class WeatherModel {
     @Optional
     private String unitWeatherComponents;
 
-//    @Self
-//    private Resource resource;
+    private CurrentCondition currentCondition;
 
     public String getCityWeatherComponents() {
         return cityWeatherComponents;
@@ -69,6 +68,14 @@ public class WeatherModel {
 
     public void setUnitWeatherComponents(String unitWeatherComponents) {
         this.unitWeatherComponents = unitWeatherComponents;
+    }
+
+    public CurrentCondition getCurrentCondition() {
+        return currentCondition;
+    }
+
+    public void setCurrentCondition(CurrentCondition currentCondition) {
+        this.currentCondition = currentCondition;
     }
 
     @PostConstruct

@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%><%
+<%@include file="/apps/mycqproject/common/global.jsp"%><%
 %><%@ page import="com.day.cq.commons.Doctype,
                     com.day.cq.wcm.foundation.Image,
                     com.day.cq.wcm.api.components.DropTarget,

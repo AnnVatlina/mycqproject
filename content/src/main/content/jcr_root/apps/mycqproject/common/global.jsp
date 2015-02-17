@@ -41,7 +41,7 @@
 
   ==============================================================================
 
---%><%@page session="false" import="javax.jcr.*,
+--%><%@page session="false" trimDirectiveWhitespaces="true" import="javax.jcr.*,
         org.apache.sling.api.resource.Resource,
         org.apache.sling.api.resource.ValueMap,
         com.day.cq.commons.inherit.InheritanceValueMap,

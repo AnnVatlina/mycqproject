@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%><%
+<%@include file="/apps/mycqproject/common/global.jsp"%><%
 %><%@ page import="java.util.Iterator,
         com.day.text.Text, 
         com.day.cq.wcm.api.PageFilter, com.day.cq.wcm.api.Page" %><%
