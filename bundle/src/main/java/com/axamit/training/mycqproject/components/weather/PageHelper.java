@@ -1,7 +1,7 @@
 /*
 package com.axamit.training.mycqproject.components.weather;
 
-import com.axamit.training.mycqproject.service.WeatherService;
+import com.axamit.training.mycqproject.components.weather.service.WeatherService;
 import org.apache.sling.api.scripting.SlingScriptHelper;
 
 import javax.servlet.jsp.PageContext;

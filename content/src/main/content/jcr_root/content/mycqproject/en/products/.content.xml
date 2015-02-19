@@ -9,7 +9,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Products"
-        jcr:uuid="d4cde853-328d-44a2-8d0a-fb6001fe24da"
+        jcr:uuid="85172d67-5842-4004-b9c0-abd5dfff9236"
         sling:resourceType="mycqproject/components/contentpage"
         subtitle="what we do">
         <newslist
@@ -22,11 +22,11 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys"/>
         <rightpar
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="foundation/components/iparsys">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/iparsys">
             <weather
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="mycqproject/components/weather"/>
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mycqproject/components/weather"/>
         </rightpar>
     </jcr:content>
     <product1/>

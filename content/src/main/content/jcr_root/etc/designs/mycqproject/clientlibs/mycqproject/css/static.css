@@ -62,7 +62,7 @@ div.widecenter {
 }
 /* top navigation component */
 #CQ div.topnav {
-    background:url(images/tail.jpg) top repeat-x;
+    background:url(/etc/designs/mycqproject/images/tail.jpg) top repeat-x;
     white-space:nowrap;
     color:white;
 }
@@ -80,7 +80,7 @@ div.widecenter {
 /* news list component */
 #CQ div.content div.left div.newslist {
     color:#E7E7E7;
-    background:url(images/gr_bg.jpg) 0 0 repeat-x #444F55;
+    background:url(/etc/designs/mycqproject/images/gr_bg.jpg) 0 0 repeat-x #444F55;
     padding: 14px 8px 20px 24px;
 }
 #CQ div.content div.left div.newslist div.item {
@@ -104,7 +104,7 @@ div.widecenter {
     padding:17px 34px 16px 24px;
 }
 #CQ div.content div.left .form_1 .link_1 {
-    background:url(images/bullet1.gif) 0 0 no-repeat;
+    background:url(/etc/designs/mycqproject/images/bullet1.gif) 0 0 no-repeat;
     padding:0 0 0 10px;
     color:#14729E;
     font:normal 10px Tahoma, Geneva, Arial, Helvetica, sans-serif;
@@ -191,7 +191,7 @@ div.widecenter {
 #CQ div.footer a {
     color:#FFF;
     font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
-    background:url(images/bullet3.gif) 0 0 no-repeat;
+    background:url(/etc/designs/mycqproject/images/bullet3.gif) 0 0 no-repeat;
     padding:0 10px 0 17px;
     text-decoration:underline
 }
@@ -213,15 +213,20 @@ div.section.hidden {
 
 /*-LINKS-*/
 .link_1 {
-    background:url(images/bullet2.gif) 0 0 no-repeat;
+    background:url(/etc/designs/mycqproject/images/bullet2.gif) 0 0 no-repeat;
     font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
     color:#FFF;
     padding:0 0 0 12px;
 }
 
 .link_2 {
-    background:url(images/bullet5.gif) 0 0 no-repeat;
+    background:url(/etc/designs/mycqproject/images/bullet5.gif) 0 0 no-repeat;
     font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
     color:#4F960F;
     padding:0 0 0 12px;
+}
+
+#CQ  .weather_block .content_area img{
+    width: 15px;
+    height: 15px;
 }

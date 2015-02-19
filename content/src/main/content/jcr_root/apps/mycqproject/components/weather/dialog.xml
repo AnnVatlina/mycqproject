@@ -17,7 +17,8 @@
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Title:"
                             name="./titleWeatherComponent"
-                            xtype="textfield"/>
+                            xtype="textfield"
+                            />
                     <text
                             jcr:primaryType="cq:Widget"
                             height="300"
@@ -160,7 +161,8 @@
                             optionsTextField = "nm"
                             optionsValueField = "id"
                             optionsRoot = "cities"
-                            xtype="selection"/>
+                            xtype="selection"
+                            required="{Boolean}true"/>
                     <unit
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Select Unit: "

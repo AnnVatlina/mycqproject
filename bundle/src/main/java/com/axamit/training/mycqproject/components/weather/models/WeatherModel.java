@@ -1,7 +1,8 @@
-package com.axamit.training.mycqproject.models;
+package com.axamit.training.mycqproject.components.weather.models;
 
-import com.axamit.training.mycqproject.service.WeatherService;
+import com.axamit.training.mycqproject.components.weather.service.WeatherService;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 
@@ -29,7 +30,7 @@ public class WeatherModel {
     private String textWeatherComponent;
 
     @Inject
-    @Optional
+    @Default(values = "524901")
     private String cityWeatherComponents;
 
     @Inject

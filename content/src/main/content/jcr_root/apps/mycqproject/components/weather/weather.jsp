@@ -1,17 +1,29 @@
-<%@include file="/apps/mycqproject/common/global.jsp"%>
+<%@include file="/apps/mycqproject/common/global.jsp" %>
+<cq:includeClientLib categories="weatherComponent"/>
+<sling:adaptTo var="search" adaptable="${resource}"
+               adaptTo="com.axamit.training.mycqproject.components.weather.models.WeatherModel"/>
+<div class="panel-header bg-pink fg-white">${properties.titleWeatherComponent}</div>
+<div class="panel-content fg-dark nlp nrp">
 
-<div class="weather_block">
+    <p>${properties.textWeatherComponent}</p>
 
-    <h3>${properties.titleWeatherComponent}</h3>
+    <p>Location: ${search.currentCondition.condition} - <img src="${search.currentCondition.icon}.png"
+                                                             alt="${search.currentCondition.condition}" width="40"
+                                                             height="40"/></p>
 
-    <div class="content_area">
-        ${properties.textWeatherComponent}
-    </div>
-
-    ${properties.cityWeatherComponents}
-    ${properties.unitWeatherComponents}
-
-    <sling:adaptTo var="search" adaptable="${resource}" adaptTo="com.axamit.training.mycqproject.models.WeatherModel"/>
-    ${search.currentCondition.city}, ${search.currentCondition.country}
-
+    <p>${search.currentCondition.city}, ${search.currentCondition.country}</p>
+    <table border="0" cellpadding="10" cellspacing="0" width="100%">
+        <tr>
+            <td>Min:</td>
+            <td>Max:</td>
+            <td>Humidity:</td>
+            <td>Wind speed:</td>
+        </tr>
+        <tr>
+            <td>${search.currentCondition.tempMin}</td>
+            <td>${search.currentCondition.tempMax}</td>
+            <td>${search.currentCondition.humidity}</td>
+            <td>${search.currentCondition.windSpeed}</td>
+        </tr>
+    </table>
 </div>

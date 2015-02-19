@@ -1,6 +1,6 @@
-package com.axamit.training.mycqproject.service;
+package com.axamit.training.mycqproject.components.weather.service;
 
-import com.axamit.training.mycqproject.models.WeatherModel;
+import com.axamit.training.mycqproject.components.weather.models.WeatherModel;
 
 /**
  * <p>Copyright (c) 2014 Axamit</p>

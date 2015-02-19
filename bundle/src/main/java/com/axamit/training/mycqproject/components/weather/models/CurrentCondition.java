@@ -1,4 +1,4 @@
-package com.axamit.training.mycqproject.models;
+package com.axamit.training.mycqproject.components.weather.models;
 
 /**
  * <p>Copyright (c) 2014 Axamit</p>
@@ -13,13 +13,10 @@ public class CurrentCondition {
     private String condition;
     private String icon;
 
-    public int getWeatherId() {
-        return weatherId;
-    }
-
-    public void setWeatherId(int weatherId) {
-        this.weatherId = weatherId;
-    }
+    private float tempMin;
+    private float tempMax;
+    private float humidity;
+    private float windSpeed;
 
     public String getCity() {
         return city;
@@ -59,5 +56,37 @@ public class CurrentCondition {
 
     public void setIcon(String icon) {
         this.icon = icon;
+    }
+
+    public float getTempMin() {
+        return tempMin;
+    }
+
+    public void setTempMin(float tempMin) {
+        this.tempMin = tempMin;
+    }
+
+    public float getTempMax() {
+        return tempMax;
+    }
+
+    public void setTempMax(float tempMax) {
+        this.tempMax = tempMax;
+    }
+
+    public float getHumidity() {
+        return humidity;
+    }
+
+    public void setHumidity(float humidity) {
+        this.humidity = humidity;
+    }
+
+    public float getWindSpeed() {
+        return windSpeed;
+    }
+
+    public void setWindSpeed(float windSpeed) {
+        this.windSpeed = windSpeed;
     }
 }
