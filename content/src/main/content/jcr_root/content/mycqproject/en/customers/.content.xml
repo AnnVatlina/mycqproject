@@ -4,17 +4,11 @@
     <jcr:content
         cq:lastModified="{Date}2012-09-20T12:36:07.668-04:00"
         cq:lastModifiedBy="admin"
-        cq:template="/apps/mycqproject/templates/contentpage"
+        cq:template="/apps/mycqproject/templates/innerpages"
         jcr:created="{Date}2012-09-20T11:34:37.158-04:00"
         jcr:createdBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="Customers"
-        sling:resourceType="mycqproject/components/contentpage"
-        subtitle="the trust we earn">
-        <image
-            jcr:lastModified="{Date}2012-09-20T12:36:07.668-04:00"
-            jcr:lastModifiedBy="admin"
-            jcr:primaryType="nt:unstructured"
-            imageRotate="0"/>
-    </jcr:content>
+        sling:resourceType="mycqproject/components/contentpage/inner"
+        subtitle="the trust we earn"/>
 </jcr:root>

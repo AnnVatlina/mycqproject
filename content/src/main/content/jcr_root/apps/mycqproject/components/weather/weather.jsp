@@ -1,5 +1,4 @@
 <%@include file="/apps/mycqproject/common/global.jsp" %>
-<cq:includeClientLib categories="weatherComponent"/>
 <sling:adaptTo var="search" adaptable="${resource}"
                adaptTo="com.axamit.training.mycqproject.components.weather.models.WeatherModel"/>
 <div class="panel-header bg-pink fg-white">${properties.titleWeatherComponent}</div>

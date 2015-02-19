@@ -2,26 +2,8 @@
 <body class="metro">
 
 <div class="container">
-    <header class="margin20 nrm nlm">
-        <div class="clearfix">
-            <div class="place-right">
-                <form>
-                    <div class="input-control text size6 margin20 nrm">
-                        <input type="text" name="q" placeholder="Search...">
-                        <button class="btn-search"></button>
-                    </div>
-                </form>
-            </div>
-            <a class="place-left" href="#" title="">
-                <h1>News Portal</h1>
-            </a>
-        </div>
 
-        <div class="main-menu-wrapper">
-            <cq:include path="navTop" resourceType="mycqproject/components/listpages" />
-        </div>
-    </header>
-
+    <cq:include script="headerBody.jsp"/>
     <div class="main-content clearfix">
         <div class="tile-area no-padding clearfix">
             <div class="tile-group no-margin no-padding clearfix" style="width: 100%">
@@ -76,42 +58,9 @@
                     <cq:include script="rightpanel.jsp"/>
                 </div>
             </div> <!-- End first group -->
-<%--
-            <div class="tile-group no-margin no-padding clearfix" style="width: 100%">
-                <div class="tile double ol-transparent"></div>
-                <div class="tile double ol-transparent"></div>
-                <div class="tile double ol-transparent"></div>
-                <div class="tile double ol-transparent"></div>
-            </div>
-
-            <div class="tile-group no-margin no-padding1 clearfix" style="width: 100%;">
-                <a href="#"><span class="tile-group-title fg-orange">NEWS <span class="icon-arrow-right-5"></span></span></a>
-                <div class="tile quadro double-vertical ol-transparent"></div>
-                <div class="tile double ol-transparent"></div>
-                <div class="tile ol-transparent"></div>
-                <div class="tile ol-transparent"></div>
-                <div class="tile ol-transparent"></div>
-                <div class="tile ol-transparent"></div>
-                <div class="tile double ol-transparent"></div>
-            </div>
-
-            <div class="tile-group no-margin no-padding1 clearfix" style="width: 100%;">
-                <a href="#"><span class="tile-group-title fg-cobalt">SPORT <span class="icon-arrow-right-5"></span></span></a>
-                <div class="tile quadro double-vertical ol-transparent"></div>
-                <div class="tile double ol-transparent"></div>
-                <div class="tile ol-transparent"></div>
-                <div class="tile ol-transparent"></div>
-                <div class="tile ol-transparent"></div>
-                <div class="tile ol-transparent"></div>
-                <div class="tile double ol-transparent"></div>
-            </div>--%>
         </div>
     </div> <!-- End of tiles -->
 
-    <footer>
-        <div class="bottom-menu-wrapper">
-            <cq:include path="navBottom" resourceType="mycqproject/components/listpages" />
-        </div>
-    </footer>
+    <cq:include script="footer.jsp"/>
 </div>
 </body>

@@ -4,10 +4,10 @@
     <jcr:content
         cq:lastModified="{Date}2012-09-20T15:26:06.833-04:00"
         cq:lastModifiedBy="admin"
-        cq:template="/apps/mycqproject/templates/contentpage"
+        cq:template="/apps/mycqproject/templates/innerpages"
         jcr:description="This is a description of the Product 1!"
         jcr:primaryType="cq:PageContent"
         jcr:title="Product 1"
-        sling:resourceType="mycqproject/components/contentpage"
+        sling:resourceType="mycqproject/components/contentpage/inner"
         date="02/14/2012"/>
 </jcr:root>

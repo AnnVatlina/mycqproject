@@ -2,3 +2,4 @@
 jquery-2.1.3.min.js
 metro-global.js
 metro-core.js
+jquery.widget.min.js

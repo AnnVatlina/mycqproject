@@ -1,4 +1,3 @@
-
 <%@include file="/apps/mycqproject/common/global.jsp" %>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
