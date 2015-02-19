@@ -16,6 +16,7 @@ import java.io.IOException;
  * <p>Copyright (c) 2014 Axamit</p>
  * User: anna.vatlina on 12.02.2015, 15:08
  */
+//TODO @author anna.vatlina будет выглядеть эффектнее ;-)
 
 @SlingServlet(paths = {"/bin/units"})
 public class OptionsServlet extends SlingSafeMethodsServlet {
@@ -29,6 +30,8 @@ public class OptionsServlet extends SlingSafeMethodsServlet {
             JSONObject eachOption;
             JSONArray optionsArray = new JSONArray();
 
+            //TODO создание JSONObject можно вынести в отдельный метод и / или создание конечного JSON файла в utility класс
+            //TODO с методом наподобие getDialogOptions(List<String>)
             //This loop creates multiple objects under a array that will be returned.
             eachOption = new JSONObject();
             eachOption.put("text", "internal");

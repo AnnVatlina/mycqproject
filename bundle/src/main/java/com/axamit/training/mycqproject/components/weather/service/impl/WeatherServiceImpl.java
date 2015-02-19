@@ -4,7 +4,11 @@ import com.axamit.training.mycqproject.components.weather.models.CurrentConditio
 import com.axamit.training.mycqproject.components.weather.models.WeatherModel;
 import com.axamit.training.mycqproject.components.weather.service.WeatherService;
 import com.axamit.training.mycqproject.components.weather.util.OpenWeatherMapProperty;
-import org.apache.felix.scr.annotations.*;
+import org.apache.felix.scr.annotations.Activate;
+import org.apache.felix.scr.annotations.Component;
+import org.apache.felix.scr.annotations.Properties;
+import org.apache.felix.scr.annotations.Property;
+import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.commons.json.JSONException;
 import org.apache.sling.commons.json.JSONObject;
 import org.osgi.service.component.ComponentContext;
@@ -25,6 +29,9 @@ import java.net.URL;
 
 @Component(metatype = true, immediate = true)
 @Service(value = WeatherService.class)
+//TODO Так же можно размещать @Property внутри класса, привязав к static final переменной, которая будет хранить имя
+//TODO свойства делая его доступным для других классов.
+
 @Properties({
         @Property(name = "targetURL", description = "Link for get data"),
         @Property(name = "IMG_URL", description = "Path for image")
@@ -48,12 +55,18 @@ public class WeatherServiceImpl implements WeatherService {
         String unit = weatherModel.getUnitWeatherComponents();
         if (city == null) {
             LOGGER.error("Not value for city.");
+            //TODO Я бы предложил бросать на верх какой-нибудь кастомный exception, который можно было бы перехватить
+            //TODO на уровне контроллера и уведомить пользователя о возникших проблемах.
             throw new NullPointerException();
         }
         try {
             JSONObject jObj = getResource(city, unit);
             JSONObject sysObj = OpenWeatherMapProperty.getObject(OpenWeatherMapProperty.sysParam, jObj);
             JSONObject weatherObj = jObj.getJSONArray(OpenWeatherMapProperty.weatherArrayParam).getJSONObject(0);
+            //TODO Мне нравится подход к построению сущностей - static builder паттерн. Из плюсов - симпатичный читаемый код.
+            //TODO Возможно, вам придется по вкусу.
+            //TODO В Идее есть плагин, который генирирует необходимый код для сущности.
+            //TODO Я бы вынес в отдельный метод конвертацию.
             CurrentCondition currentCondition = new CurrentCondition();
             currentCondition.setCity(OpenWeatherMapProperty.getString(OpenWeatherMapProperty.nameParam, jObj));
             currentCondition.setCountry(OpenWeatherMapProperty.getString(OpenWeatherMapProperty.countryParam, sysObj));
@@ -79,10 +92,12 @@ public class WeatherServiceImpl implements WeatherService {
     private JSONObject getResource(String city, String unit) {
         JSONObject jObj = null;
         String currentPath = targetURL + "?id=" + city;
-        if(unit!=null){
+        //TODO StringUtils.isNotBlank() - альтернатива.
+        if (unit != null) {
             currentPath = currentPath + "&units=" + unit;
         }
         try {
+            //TODO функциональность получения файла можно вынести в отдельный utility class с методом наподобие getJSONFile(String url)
             URL restServiceURL = new URL(currentPath);
 
             HttpURLConnection httpConnection = (HttpURLConnection) restServiceURL.openConnection();
