@@ -9,6 +9,7 @@ import org.apache.sling.commons.json.JSONObject;
  */
 public class OpenWeatherMapProperty {
 
+    //TODO соглашение об именовании static final переменных - uppercase с "_" между словами.
     public static final String sysParam = "sys";
 
     public static final String weatherArrayParam = "weather";
@@ -33,6 +34,7 @@ public class OpenWeatherMapProperty {
 
     public static final String windSpeedParam = "speed";
 
+    //TODO можно убрать методы ниже и забирать значения напрямую из JSONObject
     public static JSONObject getObject(String tagName, JSONObject jObj) throws JSONException {
         JSONObject subObj = jObj.getJSONObject(tagName);
         return subObj;
