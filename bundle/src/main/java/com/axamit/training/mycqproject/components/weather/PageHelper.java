@@ -8,9 +8,9 @@ import javax.servlet.jsp.PageContext;
 
 */
 /**
-* <p>Copyright (c) 2014 Axamit</p>
-* User: anna.vatlina on 16.02.2015, 12:47
-*//*
+ * <p>Copyright (c) 2014 Axamit</p>
+ * User: anna.vatlina on 16.02.2015, 12:47
+ *//*
 
 @Deprecated
 public class PageHelper {

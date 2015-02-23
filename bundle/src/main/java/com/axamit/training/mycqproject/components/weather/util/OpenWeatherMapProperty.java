@@ -9,32 +9,30 @@ import org.apache.sling.commons.json.JSONObject;
  */
 public class OpenWeatherMapProperty {
 
-    //TODO соглашение об именовании static final переменных - uppercase с "_" между словами.
-    public static final String sysParam = "sys";
+    public static final String sys_param = "sys";
 
-    public static final String weatherArrayParam = "weather";
+    public static final String weather_array_param = "weather";
 
-    public static final String nameParam = "name";
+    public static final String name_param = "name";
 
-    public static final String countryParam = "country";
+    public static final String country_param = "country";
 
-    public static final String descriptionParam = "description";
+    public static final String description_param = "description";
 
-    public static final String mainParam = "main";
+    public static final String main_param = "main";
 
-    public static final String iconParam = "icon";
+    public static final String icon_param = "icon";
 
-    public static final String tempMinParam = "temp_min";
+    public static final String temp_min_param = "temp_min";
 
-    public static final String tempMaxParam = "temp_max";
+    public static final String temp_max_param = "temp_max";
 
-    public static final String humidityParam = "humidity";
+    public static final String humidity_param = "humidity";
 
-    public static final String windParam = "wind";
+    public static final String wind_param = "wind";
 
-    public static final String windSpeedParam = "speed";
+    public static final String wind_speed_param = "speed";
 
-    //TODO можно убрать методы ниже и забирать значения напрямую из JSONObject
     public static JSONObject getObject(String tagName, JSONObject jObj) throws JSONException {
         JSONObject subObj = jObj.getJSONObject(tagName);
         return subObj;

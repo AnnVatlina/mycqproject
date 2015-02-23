@@ -1,11 +1,9 @@
-
-(function($){
-    $.Metro = function(params){
-        params = $.extend({
-        }, params);
+(function ($) {
+    $.Metro = function (params) {
+        params = $.extend({}, params);
     };
 
-    $.Metro.getDeviceSize = function(){
+    $.Metro.getDeviceSize = function () {
         var device_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
         var device_height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
         return {
@@ -16,18 +14,18 @@
 
 })(jQuery);
 
-$(function(){
-    $('html').on('click', function(e){
-        $('.dropdown-menu').each(function(i, el){
-            if (!$(el).hasClass('keep-open') && $(el).css('display')=='block') {
+$(function () {
+    $('html').on('click', function (e) {
+        $('.dropdown-menu').each(function (i, el) {
+            if (!$(el).hasClass('keep-open') && $(el).css('display') == 'block') {
                 $(el).hide();
             }
         });
     });
 });
 
-$(function(){
-    $(window).on('resize', function(){
+$(function () {
+    $(window).on('resize', function () {
         if (METRO_DIALOG) {
             var top = ($(window).height() - METRO_DIALOG.outerHeight()) / 2;
             var left = ($(window).width() - METRO_DIALOG.outerWidth()) / 2;
@@ -38,8 +36,8 @@ $(function(){
     });
 });
 
-$(function(){
-    if ((document.location.host.indexOf('.dev') > -1) || (document.location.host.indexOf('modernui') > -1) ) {
+$(function () {
+    if ((document.location.host.indexOf('.dev') > -1) || (document.location.host.indexOf('modernui') > -1)) {
         $("<script/>").attr('src', 'js/metro/metro-loader.js').appendTo($('head'));
     } else {
         $("<script/>").attr('src', 'js/metro.min.js').appendTo($('head'));

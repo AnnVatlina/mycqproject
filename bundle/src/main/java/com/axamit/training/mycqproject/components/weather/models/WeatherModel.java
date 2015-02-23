@@ -18,7 +18,6 @@ import javax.inject.Inject;
 public class WeatherModel {
 
     @Inject
-    @Optional
     private WeatherService weatherService;
 
     @Inject
@@ -80,7 +79,9 @@ public class WeatherModel {
     }
 
     @PostConstruct
-    protected void init() {
-        weatherService.doSomething(this);
+    protected WeatherModel init() {
+        setCurrentCondition(weatherService.doSomething(cityWeatherComponents, unitWeatherComponents));
+        System.out.print("dsfdsf");
+        return this;
     }
 }

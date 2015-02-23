@@ -1,14 +1,5 @@
 package com.axamit.training.mycqproject.service.impl.filters;
 
-import java.io.IOException;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.sling.SlingFilter;
 import org.apache.felix.scr.annotations.sling.SlingFilterScope;
@@ -16,13 +7,16 @@ import org.apache.sling.api.SlingHttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.*;
+import java.io.IOException;
+
 /**
-* Simple servlet filter component that logs incoming requests.
-*/
+ * Simple servlet filter component that logs incoming requests.
+ */
 @SlingFilter(generateComponent = false, generateService = true, order = -700, scope = SlingFilterScope.REQUEST)
 @Component(immediate = true, metatype = false)
 public class LoggingFilter implements Filter {
-    
+
     private Logger logger = LoggerFactory.getLogger(LoggingFilter.class);
 
     public void init(FilterConfig filterConfig) throws ServletException {

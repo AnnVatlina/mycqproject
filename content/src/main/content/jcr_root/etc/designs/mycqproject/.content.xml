@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="cq:Page">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2012-09-21T19:36:52.207-04:00"
-        cq:lastModifiedBy="admin"
-        cq:template="/libs/wcm/core/templates/designpage"
-        jcr:primaryType="cq:PageContent"
-        jcr:title="mycqproject"
-        sling:resourceType="wcm/core/components/designer">
+            cq:lastModified="{Date}2012-09-21T19:36:52.207-04:00"
+            cq:lastModifiedBy="admin"
+            cq:template="/libs/wcm/core/templates/designpage"
+            jcr:primaryType="cq:PageContent"
+            jcr:title="mycqproject"
+            sling:resourceType="wcm/core/components/designer">
         <contentpage jcr:primaryType="nt:unstructured">
             <logo
-                jcr:lastModified="{Date}2012-09-21T14:17:36.997-04:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="mycqproject/components/logo"
-                imageRotate="0"
-                maxWidth="165">
+                    jcr:lastModified="{Date}2012-09-21T14:17:36.997-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mycqproject/components/logo"
+                    imageRotate="0"
+                    maxWidth="165">
                 <image/>
             </logo>
             <par
-                jcr:lastModified="{Date}2012-09-21T19:36:52.207-04:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="foundation/components/parsys"
-                components="[/apps/mycqproject/components/search,/apps/mycqproject/components/weather]">
+                    jcr:lastModified="{Date}2012-09-21T19:36:52.207-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/parsys"
+                    components="[/apps/mycqproject/components/search,/apps/mycqproject/components/weather]">
                 <section jcr:primaryType="nt:unstructured"/>
             </par>
         </contentpage>

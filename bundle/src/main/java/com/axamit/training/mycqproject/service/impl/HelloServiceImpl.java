@@ -4,7 +4,6 @@ import com.axamit.training.mycqproject.service.HelloService;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
-import org.apache.felix.scr.annotations.sling.SlingServlet;
 import org.apache.sling.jcr.api.SlingRepository;
 
 import javax.jcr.Repository;
@@ -13,10 +12,10 @@ import javax.jcr.Repository;
  * One implementation of the {@link HelloService}. Note that
  * the repository is injected, not retrieved.
  */
-@Service (value = HelloService.class)
+@Service(value = HelloService.class)
 @Component(metatype = false)
 public class HelloServiceImpl implements HelloService {
-    
+
     @Reference
     private SlingRepository repository;
 

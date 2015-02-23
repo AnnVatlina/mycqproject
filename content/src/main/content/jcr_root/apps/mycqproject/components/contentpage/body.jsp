@@ -1,4 +1,4 @@
-<%@include file="/apps/mycqproject/common/global.jsp"%>
+<%@include file="/apps/mycqproject/common/global.jsp" %>
 <body class="metro">
 
 <div class="container">
@@ -17,15 +17,16 @@
 
                 <div class="tile quadro double-vertical ol-transparent">
                     <div class="tile-content">
-                        <div class="carousel" data-role="carousel" data-height="100%" data-width="100%" data-controls="false">
+                        <div class="carousel" data-role="carousel" data-height="100%" data-width="100%"
+                             data-controls="false">
                             <div class="slide">
-                                <img src="/etc/designs/mycqproject/images/1.jpg" />
+                                <img src="/etc/designs/mycqproject/images/1.jpg"/>
                             </div>
                             <div class="slide">
-                                <img src="/etc/designs/mycqproject/images/2.jpg" />
+                                <img src="/etc/designs/mycqproject/images/2.jpg"/>
                             </div>
                             <div class="slide">
-                                <img src="/etc/designs/mycqproject/images/3.jpg" />
+                                <img src="/etc/designs/mycqproject/images/3.jpg"/>
                             </div>
                         </div>
                     </div>
@@ -57,9 +58,11 @@
                 <div class="tile triple double-vertical ol-transparent bg-white">
                     <cq:include script="rightpanel.jsp"/>
                 </div>
-            </div> <!-- End first group -->
+            </div>
+            <!-- End first group -->
         </div>
-    </div> <!-- End of tiles -->
+    </div>
+    <!-- End of tiles -->
 
     <cq:include script="footer.jsp"/>
 </div>

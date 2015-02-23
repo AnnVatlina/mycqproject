@@ -1,6 +1,6 @@
 package com.axamit.training.mycqproject.components.weather.service;
 
-import com.axamit.training.mycqproject.components.weather.models.WeatherModel;
+import com.axamit.training.mycqproject.components.weather.models.CurrentCondition;
 
 /**
  * <p>Copyright (c) 2014 Axamit</p>
@@ -8,5 +8,5 @@ import com.axamit.training.mycqproject.components.weather.models.WeatherModel;
  */
 
 public interface WeatherService {
-    public void doSomething(WeatherModel weatherModel);
+    public CurrentCondition doSomething(final String city, final String unit);
 }

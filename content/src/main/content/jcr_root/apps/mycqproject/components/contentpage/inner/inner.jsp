@@ -1,4 +1,4 @@
-<%@include file="/apps/mycqproject/common/global.jsp"%>
+<%@include file="/apps/mycqproject/common/global.jsp" %>
 <%@page session="false" contentType="text/html; charset=utf-8" %>
 <!DOCTYPE html>
 <html>

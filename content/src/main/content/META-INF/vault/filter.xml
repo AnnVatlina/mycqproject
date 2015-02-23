@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/apps/mycqproject" />
+    <filter root="/apps/mycqproject"/>
     <filter root="/content/mycqproject"/>
     <filter root="/content/dam/mycqproject"/>
     <filter root="/etc/designs/mycqproject"/>

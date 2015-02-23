@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width">
 
     <title>${not empty currentPage.title ? currentPage.title : currentPage.pageTitle}</title>
-    <cq:includeClientLib categories="mycqproject.base" />
+    <cq:includeClientLib categories="mycqproject.base"/>
     <style>
         .container {
             width: 1040px;

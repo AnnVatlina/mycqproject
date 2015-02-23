@@ -158,9 +158,9 @@
                             name="./cityWeatherComponents"
                             type="select"
                             options="/content/dam/mycqproject/city.json"
-                            optionsTextField = "nm"
-                            optionsValueField = "id"
-                            optionsRoot = "cities"
+                            optionsTextField="nm"
+                            optionsValueField="id"
+                            optionsRoot="cities"
                             xtype="selection"
                             required="{Boolean}true"/>
                     <unit

@@ -6,11 +6,12 @@
 
     <p>${properties.textWeatherComponent}</p>
 
-    <p>Location: ${search.currentCondition.condition} - <img src="${search.currentCondition.icon}.png"
-                                                             alt="${search.currentCondition.condition}" width="40"
-                                                             height="40"/></p>
+    <p>Location: ${search.currentCondition.weatherArray[0].main} - <img
+            src="http://openweathermap.org/img/w/${search.currentCondition.weatherArray[0].iconWeather}.png"
+            alt="${search.currentCondition.weatherArray[0].main}" width="40"
+            height="40"/></p>
 
-    <p>${search.currentCondition.city}, ${search.currentCondition.country}</p>
+    <p>${search.currentCondition.name}, ${search.currentCondition.country}</p>
     <table border="0" cellpadding="10" cellspacing="0" width="100%">
         <tr>
             <td>Min:</td>
@@ -19,12 +20,10 @@
             <td>Wind speed:</td>
         </tr>
         <tr>
-            <td>${search.currentCondition.tempMin}</td>
-            <td>${search.currentCondition.tempMax}</td>
-            <td>${search.currentCondition.humidity}</td>
-            <td>${search.currentCondition.windSpeed}</td>
+            <td>${search.currentCondition.mainAttributes.temp_min}</td>
+            <td>${search.currentCondition.mainAttributes.temp_max}</td>
+            <td>${search.currentCondition.mainAttributes.humidity}</td>
+            <td>${search.currentCondition.speed}</td>
         </tr>
     </table>
 </div>
-
-<%-- TODO Красота!--%>

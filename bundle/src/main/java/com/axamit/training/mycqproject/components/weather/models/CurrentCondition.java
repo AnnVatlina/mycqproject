@@ -1,29 +1,57 @@
 package com.axamit.training.mycqproject.components.weather.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.io.Serializable;
+
 /**
  * <p>Copyright (c) 2014 Axamit</p>
  * User: anna.vatlina on 17.02.2015, 14:34
  */
-public class CurrentCondition {
 
-    private int weatherId;
-    private String city;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class CurrentCondition implements Serializable {
+
+    private String name;
     private String country;
-    private String description;
-    private String condition;
-    private String icon;
+    /*private String main;
+    private String icon;*/
+    @JsonProperty("weather")
+    private Weather[] weatherArray;
 
-    private float tempMin;
-    private float tempMax;
-    private float humidity;
-    private float windSpeed;
+    /*private float temp_min;
+    private float temp_max;
+    private float humidity;*/
+    @JsonProperty("main")
+    private MainAttribute mainAttributes;
+    private float speed;
 
-    public String getCity() {
-        return city;
+    public MainAttribute getMainAttributes() {
+        return mainAttributes;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setMainAttributes(MainAttribute mainAttributes) {
+        this.mainAttributes = mainAttributes;
+    }
+
+    public Weather[] getWeatherArray() {
+        return weatherArray;
+    }
+
+    public void setWeatherArray(Weather[] weatherArray) {
+        this.weatherArray = weatherArray;
+    }
+
+    public CurrentCondition() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCountry() {
@@ -34,59 +62,11 @@ public class CurrentCondition {
         this.country = country;
     }
 
-    public String getDescription() {
-        return description;
+    public float getSpeed() {
+        return speed;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getCondition() {
-        return condition;
-    }
-
-    public void setCondition(String condition) {
-        this.condition = condition;
-    }
-
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public float getTempMin() {
-        return tempMin;
-    }
-
-    public void setTempMin(float tempMin) {
-        this.tempMin = tempMin;
-    }
-
-    public float getTempMax() {
-        return tempMax;
-    }
-
-    public void setTempMax(float tempMax) {
-        this.tempMax = tempMax;
-    }
-
-    public float getHumidity() {
-        return humidity;
-    }
-
-    public void setHumidity(float humidity) {
-        this.humidity = humidity;
-    }
-
-    public float getWindSpeed() {
-        return windSpeed;
-    }
-
-    public void setWindSpeed(float windSpeed) {
-        this.windSpeed = windSpeed;
+    public void setSpeed(float speed) {
+        this.speed = speed;
     }
 }
