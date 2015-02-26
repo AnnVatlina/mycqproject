@@ -4,5 +4,6 @@
     <filter root="/content/mycqproject"/>
     <filter root="/content/dam/mycqproject"/>
     <filter root="/etc/designs/mycqproject"/>
+    <filter root="/etc/tags/mycqproject"/>
     <filter root="/etc/clientlibs/mycqproject"/>
 </workspaceFilter>
