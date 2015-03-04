@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
-          xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="cq:Page">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
     <jcr:content
-            cq:lastModified="{Date}2012-09-20T15:28:53.056-04:00"
-            cq:lastModifiedBy="admin"
-            cq:template="/apps/mycqproject/templates/innerpages"
-            jcr:description="This is a description of the Product 2!"
-            jcr:primaryType="cq:PageContent"
-            jcr:title="Product 2"
-            sling:resourceType="mycqproject/components/contentpage/inner"
-            date="05/11/2012"/>
+        cq:lastModified="{Date}2015-03-03T11:21:53.416+03:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/mycqproject/templates/innerpages"
+        jcr:description="This is a description of the Product 2!"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Product 2"
+        sling:resourceType="mycqproject/components/contentpage/inner"
+        date="05/11/2012">
+        <mainBox
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <weather
+                jcr:created="{Date}2015-03-03T11:20:41.848+03:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-03-03T11:21:53.413+03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mycqproject/components/weather"
+                cityWeatherComponents="6058560"
+                textWeatherComponent="&lt;p>By default: Moscow&lt;/p>&#xa;&lt;p>Selected: London&lt;/p>&#xa;&lt;p>Show: Minsk&lt;/p>&#xa;"
+                titleWeatherComponent="Weather Sling Selectors"
+                unitWeatherComponents="imperial"/>
+        </mainBox>
+    </jcr:content>
 </jcr:root>

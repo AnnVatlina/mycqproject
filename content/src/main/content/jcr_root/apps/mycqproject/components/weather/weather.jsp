@@ -1,6 +1,17 @@
 <%@include file="/apps/mycqproject/common/global.jsp" %>
-<sling:adaptTo var="search" adaptable="${resource}"
-               adaptTo="com.axamit.training.mycqproject.components.weather.models.WeatherModel"/>
+<c:set var="selectors" value="${slingRequest.requestPathInfo.selectors}"/>
+${selectors}   <br>
+${selectors[0]}
+<c:choose>
+    <c:when test="${empty selectors[0]}">
+        <sling:adaptTo var="search" adaptable="${resource}"
+                       adaptTo="com.axamit.training.mycqproject.components.weather.models.WeatherModel"/>
+    </c:when>
+    <c:otherwise>
+        <sling:adaptTo var="search" adaptable="${slingRequest}"
+                       adaptTo="com.axamit.training.mycqproject.components.weather.models.WeatherModel"/>
+    </c:otherwise>
+</c:choose>
 <div class="panel-header bg-pink fg-white">${properties.titleWeatherComponent}</div>
 <div class="panel-content fg-dark nlp nrp">
 

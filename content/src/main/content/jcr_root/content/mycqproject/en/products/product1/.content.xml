@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
-          xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="cq:Page">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
     <jcr:content
-            cq:lastModified="{Date}2012-09-20T15:26:06.833-04:00"
-            cq:lastModifiedBy="admin"
-            cq:template="/apps/mycqproject/templates/innerpages"
-            jcr:description="This is a description of the Product 1!"
-            jcr:primaryType="cq:PageContent"
-            jcr:title="Product 1"
-            sling:resourceType="mycqproject/components/contentpage/inner"
-            date="02/14/2012"/>
+        cq:lastModified="{Date}2012-09-20T15:26:06.833-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/mycqproject/templates/innerpages"
+        jcr:description="This is a description of the Product 1!"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Product 1"
+        sling:resourceType="mycqproject/components/contentpage/inner"
+        date="02/14/2012"/>
 </jcr:root>

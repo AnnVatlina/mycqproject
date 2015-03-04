@@ -10,6 +10,7 @@ import org.apache.commons.collections.IteratorUtils;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
+import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.LoginException;
 import org.apache.sling.api.resource.PersistenceException;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -17,6 +18,7 @@ import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
@@ -55,7 +57,9 @@ public class CreatePagesImpl implements CreatePages {
                 Session session = resourceResolver.adaptTo(Session.class);
 
                 pageManager = resourceResolver.adaptTo(PageManager.class);
-                page = pageManager.getContainingPage(resourceResolver.getResource(path));
+                if(!path.equalsIgnoreCase("/")) {
+                    page = pageManager.getContainingPage(resourceResolver.getResource(path));
+                }
 
                 if (page == null) {
                     throw new IllegalArgumentException("Page does not exist: " + path);
@@ -75,7 +79,8 @@ public class CreatePagesImpl implements CreatePages {
     }
 
     private void createActionNode(String relPath, String type, String name, Session session) {
-        relPath = JcrUtil.escapeIllegalJcrChars(relPath + "/" + name.toLowerCase().trim().replace(" ", ""));
+//        relPath = JcrUtil.escapeIllegalJcrChars(relPath + "/" + name.toLowerCase().trim().replace(" ", ""));
+        relPath = relPath + "/" + name.toLowerCase().trim().replace(" ", "");
 
         try {
             PageManager pageManager = resourceResolver.adaptTo(PageManager.class);

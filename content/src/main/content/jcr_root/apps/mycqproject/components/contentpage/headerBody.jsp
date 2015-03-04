@@ -2,12 +2,7 @@
 <header class="margin20 nrm nlm">
     <div class="clearfix">
         <div class="place-right">
-            <form>
-                <div class="input-control text size6 margin20 nrm">
-                    <input type="text" name="q" placeholder="Search...">
-                    <button class="btn-search"></button>
-                </div>
-            </form>
+            <cq:include path="searchByTags" resourceType="mycqproject/components/searchByTags"/>
         </div>
         <a class="place-left" href="/content/mycqproject/en.html" title="">
             <h1>News Portal</h1>

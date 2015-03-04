@@ -5,3 +5,4 @@
         <cq:include path="navBottom" resourceType="/libs/foundation/components/iparsys"/>
     </div>
 </footer>
+<cq:includeClientLib categories="mycqproject.base"/>

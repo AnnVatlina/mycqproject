@@ -8,5 +8,5 @@ import com.axamit.training.mycqproject.components.weather.models.CurrentConditio
  */
 
 public interface WeatherService {
-    public CurrentCondition doSomething(final String city, final String unit);
+    public CurrentCondition getWeather(final String city, final String unit);
 }

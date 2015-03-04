@@ -20,6 +20,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Dictionary;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * <p>Copyright (c) 2014 Axamit</p>
@@ -54,8 +56,8 @@ public class WeatherServiceImpl implements WeatherService {
     }
 
     @Override
-    public CurrentCondition doSomething(String city, String unit) {
-        LOGGER.info("WeatherServiceImpl.doSomething");
+    public CurrentCondition getWeather(String city, String unit) {
+        LOGGER.info("WeatherServiceImpl.getWeather");
         CurrentCondition currentCondition = new CurrentCondition();
 
         if (city == null) {
@@ -63,7 +65,14 @@ public class WeatherServiceImpl implements WeatherService {
             throw new NullPointerException();
         }
         try {
-            String currentPath = targetURL + "?id=" + city;
+            String currentPath;
+            Pattern p = Pattern.compile(".*\\d.*");
+            Matcher m = p.matcher(city);
+            if(m.matches()){
+                currentPath = targetURL + "?id=" + city;
+            } else{
+                currentPath = targetURL + "?q=" + city;
+            }
             if (StringUtils.isNotBlank(unit)) {
                 currentPath = currentPath + "&units=" + unit;
             }

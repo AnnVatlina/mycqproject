@@ -4,6 +4,7 @@
           jcr:description="This is my Website Content Page Template"
           jcr:primaryType="cq:Template"
           jcr:title="My Website Content Page Template"
+          sling:resourceSuperType="foundation/components/list"
           allowedPaths="[/content(/.*)?]"
           ranking="{Long}100">
     <jcr:content
