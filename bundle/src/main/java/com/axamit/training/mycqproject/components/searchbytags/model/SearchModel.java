@@ -3,8 +3,8 @@ package com.axamit.training.mycqproject.components.searchbytags.model;
 import com.axamit.training.mycqproject.components.searchbytags.service.SearchByTagsService;
 import org.apache.sling.api.resource.LoginException;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.Optional;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -15,26 +15,32 @@ import java.util.List;
  * <p>Copyright (c) 2014 Axamit</p>
  * User: anna.vatlina on 26.02.2015, 15:56
  */
-@Model(adaptables = Resource.class)
+@Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class SearchModel {
 
     @Inject
     private SearchByTagsService searchByTagsService;
 
     @Inject
-    @Optional
     private String query;
 
     @Inject
-    @Optional
+    private String[] listTags;
+
+    @Inject
+    private String conjunction;
+
+    @Inject
+    private String searchPath;
+
     private List<SearchResultModel> searchResultModels;
 
     public String getQuery() {
         return query;
     }
 
-    public void setQuery(String query) {
-        this.query = query;
+    public String[] getListTags() {
+        return listTags;
     }
 
     public List<SearchResultModel> getSearchResultModels() {
@@ -45,9 +51,21 @@ public class SearchModel {
         this.searchResultModels = searchResultModels;
     }
 
+    public String getConjunction() {
+        return conjunction;
+    }
+
+    public String getSearchPath() {
+        return searchPath;
+    }
+
     @PostConstruct
     protected SearchModel init() throws LoginException, RepositoryException {
-        setSearchResultModels(searchByTagsService.search("", query));
+        if (listTags != null) {
+            setSearchResultModels(searchByTagsService.searchByTags(searchPath, conjunction, listTags));
+        } else {
+            setSearchResultModels(searchByTagsService.search("", query));
+        }
         return this;
     }
 }

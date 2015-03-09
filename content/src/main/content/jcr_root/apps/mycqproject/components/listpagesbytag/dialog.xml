@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Edit List pages by tags Component"
+          height="600"
+          width="700"
+          xtype="dialog">
+    <items
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                    jcr:primaryType="cq:Panel"
+                    title="Add Information">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <listTags
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Select Tags:"
+                            name="./listTags"
+                            xtype="tags"
+                            />
+                    <conjunction
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Conjunction (and/or): "
+                            name="./conjunction"
+                            type="radio"
+                            xtype="selection"
+                            defaultValue="false">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <true
+                                    jcr:primaryType="cq:Widget"
+                                    text="And"
+                                    value="true"/>
+                            <false
+                                    jcr:primaryType="cq:Widget"
+                                    text="Or"
+                                    value="false"/>
+                        </options>
+                    </conjunction>
+                    <searchPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Select Tags:"
+                            name="./searchPath"
+                            xtype="pathfield"
+                            defaultValue="/content"
+                            />
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

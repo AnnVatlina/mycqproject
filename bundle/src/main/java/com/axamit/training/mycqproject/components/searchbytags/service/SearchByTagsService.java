@@ -13,4 +13,6 @@ import java.util.List;
 public interface SearchByTagsService {
 
     List<SearchResultModel> search(String path, String tags) throws LoginException, RepositoryException;
+
+    List<SearchResultModel> searchByTags(String path, String conjunction, String[] tags) throws LoginException, RepositoryException;
 }

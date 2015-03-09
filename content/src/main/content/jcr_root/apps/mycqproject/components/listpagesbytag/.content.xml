@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:description="List pages by tags"
+          jcr:primaryType="cq:Component"
+          jcr:title="List pages by tags"
+          componentGroup="MyWebsite"
+          Group="My Website"/>
